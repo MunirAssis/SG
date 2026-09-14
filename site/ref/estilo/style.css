@@ -28,7 +28,10 @@ body {
 
 header {
     background-image: 
-    linear-gradient(rgba( 0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5) 
+    ),
     url(../img/img01.JPG.jpeg);
 
     background-position: center;
@@ -38,23 +41,51 @@ header {
     
 
     height: 100vh;
+    
+    box-shadow: inset 6px 6px 13px 0px var(--sombra);
+    
+    
+         .painel {
+            padding: 50vh;
+            text-align: center;
+            
+        }
+
+        .caixa {
+
+            background-color: var(--sombra);
+            border-radius: 8px;
+        }
+        
+        .conter-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 0.75rem;
+        }
+        
+        .conter-box {
+            display: inline-block;
+
+ 
+
+        }
 
 }
 
 main {
-
-    box-shadow: inset 10px 5px 0px 5px rgba(0, 0, 0, 0.507);
-
-    & section {
-        display: inline-block;
-        width: 60vw;
-    }
+    padding: 5px;
     
-    & article {
-        display: inline-block;
-        width: 20vw;
-        vertical-align: top;
+        & section {
+            display: inline-block;
+            width: 60vw;
 
-        background-color: gray;
-    }
+        }
+        
+        & article {
+            display: inline-block;
+            width: 20vw;
+            vertical-align: top;
+            
+            background-color: gray;
+        }
 }
