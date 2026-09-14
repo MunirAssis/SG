@@ -5,10 +5,16 @@
 @import url("#");
 
 :root {
+    --cor1: #EBECEF;
+    --cor2: #BFDDF3;
+    --cor3: #4C6085;
+    --cor4: #696D7D;
+    --corfundo: #010409;
+
     --sombra: rgba( 0, 0, 0, 0.7);
     
-    --titulo1: Playfair Display;
-    --font1:  #;
+    --font1: Playfair Display;
+    --font2:  #;
 }
 
 *{
@@ -73,19 +79,50 @@ header {
 }
 
 main {
+    color: var(--cor1);
+    background-color: var(--corfundo);
     padding: 5px;
     
-        & section {
-            display: inline-block;
-            width: 60vw;
+        section {
+            display: block;
 
+            width: 60vw;
+            min-height: 2000px;
+            
+            background-color: var(--cor3);
+            flex: 1;
+            
+            border-radius: 8px;
         }
         
-        & article {
-            display: inline-block;
-            width: 20vw;
-            vertical-align: top;
+        .container{
+            display: flex;
+
+            align-items: flex-start;
             
-            background-color: gray;
+            background-color: var(--cor4);
+            border: 2px white;
+            border-radius: 8px;
+            
         }
+        
+        .sidebar {
+            position: sticky;
+            top: 20px; 
+            
+            width: 20vw;
+            background-color: #161b22; 
+            padding: 25px;
+            border-radius: 8px;
+            
+            border: 1px solid #4C6085; 
+            
+            border-left: 4px solid #BFDDF3; 
+
+            & ul {
+                list-style-position: inside;
+            }
+            
+        }
+
 }

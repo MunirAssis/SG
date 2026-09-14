@@ -1,7 +1,7 @@
-const dataAlvo = new Date('2025-09-19T00:00:00').getTime();
+const dataAlvo = new Date('2025-09-19T23:59:00').getTime();
 
 function atualizar() {
-  const diferenca = dataAlvo - new Date().getTime();
+  const diferenca = new Date().getTime() - dataAlvo;
 
   const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
   const horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
