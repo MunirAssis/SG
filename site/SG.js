@@ -1,4 +1,4 @@
-const dataAlvo = new Date('2025-09-19T23:59:00').getTime();
+const dataAlvo = new Date('2025-09-20T04:00:00').getTime();
 
 function atualizar() {
   const diferenca = new Date().getTime() - dataAlvo;
