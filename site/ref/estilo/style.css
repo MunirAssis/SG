@@ -32,6 +32,8 @@ body {
     font-family: var(--font1);
 }
 
+
+
 header {
     background-image: 
     linear-gradient(
@@ -45,7 +47,7 @@ header {
     background-attachment: fixed;
     background-repeat: no-repeat;
     
-
+    width: 100vw;
     height: 100vh;
     
     box-shadow: inset 6px 6px 13px 0px var(--sombra);
@@ -78,7 +80,10 @@ header {
 
 }
 
+
+
 main {
+    max-width: 100vw;
     color: var(--cor1);
     background-color: var(--corfundo);
     padding: 5px;
@@ -86,9 +91,10 @@ main {
         section {
             display: block;
 
-            width: 60vw;
             min-height: 2000px;
-            
+            min-width: 0;
+            padding: 20px;
+
             background-color: var(--cor3);
             flex: 1;
             
@@ -97,27 +103,29 @@ main {
         
         .container{
             display: flex;
-
-            align-items: flex-start;
             
-            background-color: var(--cor4);
+            align-items: flex-start;
+            gap: 24px
+            
+            background-color: var(--corfundo);
             border: 2px white;
             border-radius: 8px;
+
             
         }
         
         .sidebar {
+            height: 2000px;
             position: sticky;
             top: 20px; 
             
-            width: 20vw;
+
             background-color: #161b22; 
-            padding: 25px;
+
             border-radius: 8px;
             
-            border: 1px solid #4C6085; 
-            
-            border-left: 4px solid #BFDDF3; 
+
+            border: 1px solid #BFDDF3; 
 
             & ul {
                 list-style-position: inside;
