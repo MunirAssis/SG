@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+    :root {
+      --cor1: #ebecef;
+      --cor2: #bfddf3;
+      --cor3: #4c6085;
+      --cor4: #696d7d;
+      --corfundo: #010409;
+      --corfundo2: #161b22;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--corfundo);
+      color: var(--cor1);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .tl-pagina {
+      min-height: 100vh;
+      padding: 64px 20px 96px;
+    }
+
+    .tl-titulo {
+      text-align: center;
+      font-size: clamp(2rem, 6vw, 3rem);
+      color: var(--cor2);
+      margin: 0 0 8px;
+      letter-spacing: 0.5px;
+    }
+
+    .tl-sub {
+      text-align: center;
+      color: var(--cor4);
+      font-size: 1rem;
+      margin: 0 0 64px;
+    }
+
+    /* O trilho vertical */
+    .tl-linha {
+      position: relative;
+      max-width: 760px;
+      margin: 0 auto;
+      padding-left: 44px;
+    }
+
+    .tl-linha::before {
+      content: "";
+      position: absolute;
+      left: 11px;
+      top: 6px;
+      bottom: 6px;
+      width: 2px;
+      background: linear-gradient(
+        to bottom,
+        var(--cor3),
+        var(--cor2) 50%,
+        var(--cor3)
+      );
+    }
+
+    .tl-item {
+      position: relative;
+      margin-bottom: 44px;
+    }
+
+    /* A bolinha em cada evento */
+    .tl-item::before {
+      content: "";
+      position: absolute;
+      left: -44px;
+      top: 8px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--corfundo);
+      border: 3px solid var(--cor2);
+      box-shadow: 0 0 0 4px var(--corfundo);
+    }
+
+    .tl-card {
+      background-color: var(--corfundo2);
+      border: 1px solid #2a2f3a;
+      border-left: 3px solid var(--cor3);
+      border-radius: 10px;
+      padding: 20px 24px;
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .tl-card:hover {
+      transform: translateX(6px);
+      border-left-color: var(--cor2);
+    }
+
+    .tl-data {
+      display: inline-block;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--cor2);
+      margin-bottom: 6px;
+      font-family: ui-monospace, "Courier New", monospace;
+    }
+
+    .tl-item-titulo {
+      font-size: 1.35rem;
+      color: var(--cor1);
+      margin: 0 0 8px;
+    }
+
+    .tl-item-texto {
+      color: var(--cor4);
+      line-height: 1.6;
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .tl-linha {
+        padding-left: 36px;
+      }
+      .tl-item::before {
+        left: -36px;
+      }
+    }
