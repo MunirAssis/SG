@@ -23,6 +23,7 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 
@@ -54,51 +55,79 @@ header {
     height: 100dvh;
     max-width: 100%;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(0.75rem, 4vw, 3rem);
+
     box-shadow: inset 6px 6px 13px 0px var(--sombra);
     
     
     .painel {
-        display: block;
-        padding: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: min(100%, 56rem);
         text-align: center;
-        
     }
 
     .caixa {
         background-color: var(--sombra);
         border-radius: 8px;
-        min-width: 20vw;
+        width: 100%;
+        min-width: 0;
+        padding: clamp(0.85rem, 3vw, 2.25rem);
+    }
+
+    .caixa h2 {
+        font-size: clamp(1.15rem, 3.4vw, 2.25rem);
+        margin-bottom: clamp(0.75rem, 2vw, 1.5rem);
+        overflow-wrap: anywhere;
     }
     
     .conter-grid {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 0.5rem;
-    
+        gap: clamp(0.4rem, 1.4vw, 1rem);
+        width: 100%;
+    }
 
-    
-        #dias {
-            grid-row: 1;
-            padding: 10px;    
-        }
+    .conter-box {
+        min-width: 0;
+        padding: clamp(0.45rem, 1.4vw, 0.9rem) clamp(0.2rem, 1vw, 0.6rem);
+    }
 
-        #horas {
-            grid-row: 2;
-            padding: 10px;
-        }
-        #minutos {
-            grid-row: 3;
-            padding: 10px;
-        }
-        #segundos {
-            grid-row: 4;
-        }
+    .conter-box span {
+        display: block;
+        font-size: clamp(1.1rem, 4.6vw, 3rem);
+        line-height: 1.15;
+        overflow-wrap: anywhere;
+    }
 
+    .conter-box p {
+        font-family: var(--font2);
+        font-size: clamp(0.65rem, 1.8vw, 1rem);
+        margin-top: 0.25rem;
     }
 
     @media (max-width: 480px) {
         .conter-grid {
             grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.65rem;
+        }
+
+        .conter-box span {
+            font-size: clamp(1.4rem, 8vw, 2rem);
+        }
+    }
+
+    @media (min-width: 1280px) {
+        .painel {
+            width: min(100%, 64rem);
+        }
+
+        .conter-box span {
+            font-size: clamp(2rem, 3vw, 3.25rem);
         }
     }
 }    
