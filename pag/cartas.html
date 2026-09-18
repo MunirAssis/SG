@@ -13,11 +13,12 @@
   <header class="nav-barra">
       <div class="nav-interno">
 
-        <a href="index.html" class="nav-marca"></a>
+        <a href="../index.html" class="nav-marca">HOME</a>
   
         <nav>
           <ul class="nav-links">
-            <li><a href="../index.html"   class="nav-link">HOME</a></li>
+
+
             <li><a href="cartas.html"  class="nav-link ativo">CARTAS</a></li>
             <li><a href="timeline.html" class="nav-link">TIMELINE</a></li>
             <li><a href="mais.html" class="nav-link">MAIS</a></li>
@@ -36,7 +37,7 @@
 
       </aside>
 
-      <section>
+      <section aria-label="Cartas">
                        
         <div class="carrossel">
 
@@ -44,17 +45,49 @@
           <input type="radio" name="carta" id="carta-0" class="carta-radio" checked />
           <article class="carta-slide">
             <div class="carta-corpo">
-              <span class="carta-data">14/09/
+              <span class="carta-data">14/09/</span>
+                <h2>Carta 01</h2>
+                <p>Escreva aqui o seu poema sobre esse dia. Pode ser curto, simples, do seu jeito — o importante é guardar o sentimento.</p>
             </div>
               <div class="carta-rodape">
                 <label class="seta" for="carta-2" aria-label="Carta anterior">‹</label>
                 <span class="carta-indice">1 / 3</span>
                 <label class="seta" for="carta-1" aria-label="Próxima carta">›</label>
               </div>
-          </article>2025</span>
-          <h2>Quando tudo começou</h2>
-          <p>Escreva aqui o seu poema sobre esse dia. Pode ser curto, simples, do seu jeito — o importante é guardar o sentimento.</p>
+          </article>
+              
           
+          
+          <!-- Carta 02 -->
+          <input type="radio" name="carta" id="carta-1" class="carta-radio" />
+          <article class="carta-slide">
+            <div class="carta-corpo">
+              <span class="carta-data">21/09/2025</span>
+              <h2>O primeiro beijo</h2>
+              <p>Aqui entra outra cartinha. Use este espaço para colocar as palavras que lembram aquele momento especial.</p>
+            </div>
+            <div class="carta-rodape">
+              <label class="seta" for="carta-0" aria-label="Carta anterior">‹</label>
+              <span class="carta-indice">2 / 3</span>
+              <label class="seta" for="carta-2" aria-label="Próxima carta">›</label>
+            </div>
+          </article>
+
+          <!-- Carta 03 -->
+          <input type="radio" name="carta" id="carta-2" class="carta-radio" />
+          <article class="carta-slide">
+            <div class="carta-corpo">
+              <span class="carta-data">04/04/2026</span>
+              <h2>Ela disse sim</h2>
+              <p>Mais uma carta para uma data importante. Para adicionar outra, copie o par input+article acima e troque data, título e poema.</p>
+            </div>
+            <div class="carta-rodape">
+              <label class="seta" for="carta-1" aria-label="Carta anterior">‹</label>
+              <span class="carta-indice">3 / 3</span>
+              <label class="seta" for="carta-0" aria-label="Próxima carta">›</label>
+            </div>
+          </article>
+
         </div>
 
        </section>

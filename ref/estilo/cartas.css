@@ -137,14 +137,14 @@ section {
 
     /* ===== Celular: balão em cima, cartas embaixo ===== */
     @media (max-width: 767px) {
-      .cartas-tela {
+      main {
         align-items: flex-start;
         padding: 84px 16px 32px;
       }
-      .cartas-layout {
+      .item {
         grid-template-columns: 1fr;
         gap: 18px;
       }
-      .balao::after { display: none; }
+      .card::after { display: none; }
       .carrossel-palco { height: 360px; }
     }

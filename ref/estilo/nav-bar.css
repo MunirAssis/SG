@@ -61,6 +61,8 @@
     font-size: 1.05rem;
     color: var(--cor2);
     letter-spacing: 0.5px;
+    padding: 8px 16px;
+    border-radius: 999px;
     text-decoration: none;
   }
 
@@ -86,6 +88,11 @@
   .nav-link:hover {
     background: rgba(191, 221, 243, 0.12);
     color: var(--cor2);
+  }
+
+  .nav-marca:hover {
+    background: rgba(191, 221, 243, 0.12);
+
   }
 
   /* Estado ATIVO: o link da página atual fica destacado.
