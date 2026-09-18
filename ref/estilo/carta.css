@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+
+main {
+  min-height: 100vh;
+  padding: 64px 20px 96px;
+
+}
+  .item {
+
+
+    border-radius: 8px;
+    position: relative;
+    margin-bottom: 44px;
+}
+
+  .card {
+
+    background-color: var(--corfundo2);
+
+    border: 1px solid var(--cor3);
+    border-left: 3px solid var(--cor3);
+
+    border-radius: 8px;
+    padding: 20px 24px;
+}

@@ -100,13 +100,3 @@
     .nav-marca { font-size: 0.95rem; }
     .nav-link { padding: 7px 12px; font-size: 0.85rem; }
   }
-
-  /* ====== Conteúdo só para você ver o efeito rolando ====== */
-  .conteudo {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 80px 20px 200px;
-  }
-  .conteudo h1 { color: var(--cor2); }
-  .conteudo p { color: var(--cor4); line-height: 1.7; }
-  .conteudo .espaco { height: 120vh; }
