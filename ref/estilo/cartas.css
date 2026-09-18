@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+:root {
+    --cor1: #ebecef;
+    --cor2: #bfddf3;
+    --cor3: #4c6085;
+    --cor4: #696d7d;
+    --corfundo: #010409;
+    --corfundo2: #161b22;
+  }
+
+* { box-sizing: border-box; }
+
+body {
+        margin: 0;
+      background-color: var(--corfundo);
+      color: var(--cor1);
+      font-family: Georgia, "Times New Roman", serif;
+}
+
+main {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 88px 20px 36px;
+
+}
+  .item {
+      width: 100%;
+      max-width: 980px;
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 30px;
+      align-items: stretch;
+}
+
+  .card {
+
+    background-color: var(--corfundo2);
+
+    border: 1px solid var(--cor3);
+    border-left: 3px solid var(--cor3);
+
+    border-radius: 8px;
+    padding: 20px 24px;
+}
+
+section {
+  display: flex; flex-direction: column; 
+}
+.carrossel {
+  position: relative; height: 420px;  
+}
+
+.carta-slide {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+    }
+    /* a carta logo após o radio marcado aparece */
+    .carta-radio:checked + .carta-slide {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .carta-corpo {
+      flex: 1;
+      background: var(--corfundo2);
+      border: 1px solid rgba(191, 221, 243, 0.16);
+      border-left: 3px solid var(--cor3);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 16px 38px rgba(0, 0, 0, 0.22);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: auto;
+    }
+    .carta-data {
+      display: inline-block;
+      color: var(--cor2);
+      font-family: ui-monospace, "Courier New", monospace;
+      font-size: 0.82rem;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    .carta-corpo h2 {
+      color: var(--cor1);
+      font-size: clamp(1.25rem, 4vw, 1.7rem);
+      margin: 0 0 12px;
+    }
+    .carta-corpo p {
+      color: var(--cor4);
+      font-size: 1.04rem;
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    .carta-rodape {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+    }
+    .seta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      background: var(--corfundo2);
+      border: 1px solid rgba(191, 221, 243, 0.22);
+      color: var(--cor2);
+      font-size: 1.4rem;
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+    .seta:hover {
+      background: rgba(191, 221, 243, 0.14);
+      transform: scale(1.06);
+    }
+    .carta-indice {
+      color: var(--cor4);
+      font-family: ui-monospace, "Courier New", monospace;
+      font-size: 0.82rem;
+      letter-spacing: 1px;
+    }
+
+    /* ===== Celular: balão em cima, cartas embaixo ===== */
+    @media (max-width: 767px) {
+      .cartas-tela {
+        align-items: flex-start;
+        padding: 84px 16px 32px;
+      }
+      .cartas-layout {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+      .balao::after { display: none; }
+      .carrossel-palco { height: 360px; }
+    }
