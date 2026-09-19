@@ -1,14 +1,34 @@
 @charset "UTF-8";
 
+:root {
+    --cor1: #EBECEF;
+    --cor2: #BFDDF3;
+    --cor3: #4c6085;
+    --cor4: #696D7D;
+    --corfundo: #010409;
+    --corfundo2:#161b22;
+    --escurecer: rgba(0, 0, 0, 0.5);
+    --sombra: rgba( 0, 0, 0, 0.7);
+}
+
 main {
     width: 100%;
-    height: 100dvh;
-    max-width: 100%;
-    
+    min-height: 100dvh;          /* era height: cresce se o conteúdo for maior que a tela */
+
     display: flex;
+    flex-direction: column;      /* empilha: título e painéis um embaixo do outro */
     align-items: center;
     justify-content: center;
+    gap: clamp(1rem, 3vw, 2.5rem);
+
     padding: clamp(0.75rem, 4vw, 3rem);
+    padding-bottom: 10px;
+}
+
+main h1 {
+    text-align: center;
+    font-size: clamp(1.6rem, 6vw, 3rem);
+    margin: 0;
 }
 
 .painel {
@@ -86,23 +106,7 @@ main {
 }
 }
 
-/*para telas menores*/
-@media (max-width: 600px){
-header {
-    background-image: 
-    linear-gradient(
-        var(--escurecer), 
-        var(--escurecer)
-    ), 
-    url(../img/img01pq.jpg);
-
-    background-position: center;
-    background-size: cover;
-    background-attachment: scroll;
-}
-
-
-}    
+    
 
 
 
