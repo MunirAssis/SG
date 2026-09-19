@@ -31,6 +31,21 @@ main h1 {
     margin: 0;
 }
 
+.titulo {
+    text-align: center;
+    font-size: clamp(2rem, 6vw, 3rem);
+    color: var(--cor2);
+    margin: 0 0 8px;
+    letter-spacing: 0.5px;
+  }
+
+  .sub {
+    text-align: center;
+    color: var(--cor4);
+    font-size: 1rem;
+    margin: 0 0 64px;
+  }
+
 .painel {
     display: flex;
     flex-wrap: wrap;

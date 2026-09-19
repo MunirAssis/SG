@@ -25,7 +25,31 @@ main {
       justify-content: center;
       padding: 88px 20px 36px;
 
+      & h5 {
+        color: var(--cor3);
+        padding: 0;
+        border: 0;
+        margin: 0;
+        font-size: 1.04rem;
+        line-height: 1;
+      }
 }
+
+.titulo {
+  text-align: center;
+  font-size: clamp(2rem, 6vw, 3rem);
+  color: var(--cor2);
+  margin: 0 0 8px;
+  letter-spacing: 0.5px;
+}
+
+.sub {
+  text-align: center;
+  color: var(--cor4);
+  font-size: 1rem;
+  margin: 0 0 64px;
+}
+
   .item {
       width: 100%;
       max-width: 980px;
