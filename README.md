@@ -1,0 +1,3 @@
+Esse projeto foi desenvolvido para a criação de um site hoemnageando a minha namorada... 
+Onde montei um site completo com um pouco da nossa historia e um pouco sobre meus sentimentos.
+Esse site ficou com 5 paginas e responsivo! Montei esse projeto em homenagem a 1 ano juntos!
